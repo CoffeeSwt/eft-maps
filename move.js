@@ -1,4 +1,3 @@
-const { resolve6 } = require("dns");
 const fs = require("fs");
 const path = require("path");
 
@@ -31,13 +30,14 @@ const moveFile = () => {
 const fileCount = () => {
   const res = fs.readdirSync(outPath);
   console.log(outPath, `,has`, res.length, `dir`);
+  let count = 0;
   res.forEach((dir) => {
     const p = path.join(outPath, dir);
     const fileList = fs.readdirSync(p);
     console.log(p, `has`, fileList.length, `file`);
+    count += fileList.length;
   });
+  console.log(`total`, count, "file");
 };
-const main = () => {
-  fileCount();
-};
+const main = async () => {};
 main();
