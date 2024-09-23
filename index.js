@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 
-const sourceUrl = `https://assets.tarkov.dev/maps/customs_v4/main`;
+const sourceUrl = `https://assets.tarkov.dev/maps/shoreline/main_spring`;
 const imgsSavePath = path.join(__dirname, "imgs");
 
 let counter = 0;
@@ -52,12 +52,12 @@ levelPicSizeMap.set(2, [1, 1]);
 levelPicSizeMap.set(3, [1, 1]);
 levelPicSizeMap.set(4, [16, 13]);
 levelPicSizeMap.set(5, [1, 1]);
-levelPicSizeMap.set(6, [64, 49]);
+levelPicSizeMap.set(6, [64, 53]);
 
 const fetchCols = async (level, x) => {
   const ySize = levelPicSizeMap.get(level)[1];
 
-  for (let y = 15, len = ySize; y < len; y++) {
+  for (let y = 11, len = ySize; y < len; y++) {
     await fetchImgs(level, x, y);
   }
 };

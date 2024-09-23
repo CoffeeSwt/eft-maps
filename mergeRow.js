@@ -18,7 +18,7 @@ const mergeRow = async () => {
     const mergedImageCol = sharp({
       create: {
         width: 16384,
-        height: 8704,
+        height: 10752,
         channels: 4, // RGBA
         background: { r: 255, g: 255, b: 255, alpha: 0 }, // 背景设为透明
       },

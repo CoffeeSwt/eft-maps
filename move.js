@@ -39,5 +39,7 @@ const fileCount = () => {
   });
   console.log(`total`, count, "file");
 };
-const main = async () => {};
+const main = async () => {
+  moveFile()
+};
 main();
